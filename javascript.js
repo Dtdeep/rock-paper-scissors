@@ -30,3 +30,48 @@ function getHumanChoice(){
         }
 }
 
+const computerChoice = getComputerChoice();
+const humanChoice = getHumanChoice();
+
+function playRound(computerChoice, humanChoice){
+        //If both choices are the same then draw no one gets points
+        // Rock beats Scissors
+        // Scissors beats Paper
+        // Paper Beats Rock
+        // Paper loses to Scissors
+        // Scissors Loses to Rock
+        // Rock Loses to Paper
+        if(computerChoice == humanChoice){
+            console.log("Draw! Neither gets any points");
+        }
+        if(computerChoice == "Paper" && humanChoice == "Rock"){
+            console.log("You Lose! Paper beats Rock.");
+            COMPUTERSCORE++;
+        }
+        if(computerChoice == "Scissors" && humanChoice == "Paper"){
+            console.log("You Lose! Scissors beats Paper")
+            COMPUTERSCORE++;
+        }
+        if(computerChoice == "Rock" && humanChoice == "Scissors"){
+            console.log("You Lose! Rock beats Scissors")
+            COMPUTERSCORE++;
+        }
+        if(humanChoice == "Paper" && computerChoice == "Rock"){
+            console.log("You Win! Paper beats Rock.");
+            HUMANSCORE++;
+        }
+        if(humanChoice == "Scissors" && computerChoice == "Paper"){
+            console.log("You Win! Scissors beats Paper")
+            HUMANSCORE++;
+        }
+        if(humanChoice == "Rock" && computerChoice == "Scissors"){
+            console.log("You Win! Rock beats Scissors")
+            HUMANSCORE++;
+        }
+        console.log(`Human Score: ${HUMANSCORE}`);
+        console.log(`Computer Score: ${COMPUTERSCORE}`);
+}
+
+playRound(computerChoice, humanChoice);
+
+
