@@ -31,7 +31,6 @@ function playGame(){
         let humanScore = 0;
         let computerScore = 0;
         
-        
         function playRound(computerChoice, humanChoice){
                 //If both choices are the same then draw no one gets points
                 // Rock beats Scissors
@@ -76,6 +75,14 @@ function playGame(){
                 playRound(computerChoice, humanChoice);
                 console.log(`Player Score: ${humanScore}`);
                 console.log(`Computer Score: ${computerScore}`);
+        }
+
+        if(humanScore > computerScore){
+                console.log(`----- You Win! Your score is ${humanScore} and the Computer's score is ${computerScore} -----`);
+        }else if(humanScore == computerScore){
+                console.log(`----- Its a Draw! Your score is ${humanScore} and the Computer's score is ${computerScore} -----`);
+        } else{
+                console.log(`----- You Lose! Your score is ${humanScore} and the Computer's score is ${computerScore} -----`);
         }
 }
 
