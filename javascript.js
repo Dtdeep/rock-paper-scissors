@@ -1,35 +1,3 @@
-<<<<<<< HEAD
-function getComputerChoice(){
-        const generateRandom = Math.random();
-        if(generateRandom <= 0.33){
-                return "Rock";
-        } else if(generateRandom <= 0.66){
-                return "Paper";
-        } else{
-                return "Scissors";
-        }
-}
-
-function getHumanChoice(){
-        const userChoice = prompt("Choice:\n 1 : Rock, \n 2 : Paper, \n 3 : Scissors", "");
-        if(userChoice == 1){
-                return "Rock";
-        } else if (userChoice == 2){
-                return "Paper";
-        } else if (userChoice == 3){
-                return "Scissors";
-        } else {
-                alert("Invalid Choice");
-                return "";
-        }
-}
-
-function playGame(){
-        let humanScore = 0;
-        let computerScore = 0;
-        
-        function playRound(computerChoice, humanChoice){
-=======
 const rockBtn = document.querySelector("#rockBtn");
 const paperBtn = document.querySelector("#paperBtn");
 const scissorsBtn = document.querySelector("#scissorsBtn");
@@ -56,7 +24,6 @@ const playGame = function playGame(){
         }
 
         const playRound = function playRound(computerChoice, humanChoice){
->>>>>>> rps-ui
                 if(computerChoice == humanChoice){
                     messageBox.textContent = "Draw! Neither gets any points";
                     currentScore.textContent = `Human Score: ${humanScore} Computer Score: ${computerScore}`
